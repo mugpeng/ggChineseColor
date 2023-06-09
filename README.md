@@ -1,7 +1,7 @@
 Install:
 
 ``` r
-remotes::install_github("nanxstats/ggsci")
+remotes::install_github("mugpeng/ggChineseColor")
 ```
 
 
