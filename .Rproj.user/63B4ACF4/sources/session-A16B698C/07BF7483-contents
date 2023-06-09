@@ -1,0 +1,15 @@
+Package: ggChineseColor
+Title: Chinese Color palettes for 'ggplot2'
+Version: 0.1.0
+Authors@R: "Yu Zhong Peng <mugpeng@foxmail.com> [aut, cre]"
+Maintainer: Yu Zhong Peng <mugpeng@foxmail.com>
+Description: A collection of 'ggplot2' color palettes inspired by
+    amazing and stunning Chinese color.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.0
+Imports: 
+    ggplot2,
+    prismatic
+LazyData: true

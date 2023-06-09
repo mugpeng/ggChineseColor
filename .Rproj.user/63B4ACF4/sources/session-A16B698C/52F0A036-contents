@@ -1,0 +1,56 @@
+```{r library, include=FALSE}
+my_packages <- c("tidyverse", "data.table", "readxl",
+                 "rjson",
+                 "devtools", "testthat", "roxygen2")
+pacman::p_load(char = my_packages)
+
+tmp <- list()
+```
+
+
+# Load data
+```{r}
+jsonData <- fromJSON(file ="../Meterial/all_in_one.json")
+color_list <- jsonData$data
+color_list <- unlist(color_list, recursive = F)
+
+color_list2 <- lapply(color_list, function(x){
+  x$rgb <- paste0(x$rgb, collapse = ", ")
+  x$cmyk <- paste0(x$cmyk, collapse = ", ")
+  x
+})
+color_list2 <- lapply(color_list2, unlist)
+
+color_df <- do.call(rbind, color_list2)
+color_df <- as.data.frame(color_df)
+```
+
+```{r}
+table(color_df$color_series)
+```
+
+```{r}
+color_list <- split(color_df, color_df$color_series)
+
+color_list <- lapply(color_list, function(x){
+  # x = color_list[[1]]
+  cols <- x$hex
+  names(cols) <- x$tra_name
+  cols
+})
+```
+
+
+# Test function
+```{r}
+prismatic::color(pal_npg()(10))
+
+prismatic::color(sample(color_df[color_df$color_series %in% "red",]$hex, 4))
+```
+
+
+# Save
+```{r}
+save(color_df, file = "Data/color_df.Rda")
+```
+

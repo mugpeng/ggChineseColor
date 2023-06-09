@@ -1,0 +1,6 @@
+"0","my_packages <- c(""tidyverse"", ""data.table"", ""readxl"","
+"0","                 ""rjson"","
+"0","                 ""devtools"", ""testthat"", ""roxygen2"")"
+"0","pacman::p_load(char = my_packages)"
+"0",""
+"0","tmp <- list()"

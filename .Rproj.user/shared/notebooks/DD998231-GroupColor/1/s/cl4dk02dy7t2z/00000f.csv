@@ -1,0 +1,5 @@
+"0","color_list <- split(color_df$color_series)
+"
+"2","Error in split.default(color_df$color_series) : 
+  argument ""f"" is missing, with no default
+"

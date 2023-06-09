@@ -1,0 +1,8 @@
+"0","my_packages <- c(""tidyverse"", ""data.table"", ""readxl"",
+                 ""rjson""
+                 ""devtools"", ""testthat"", ""roxygen2"")
+"
+"2","Error: unexpected string constant in:
+""                 ""rjson""
+                 ""devtools""""
+"
