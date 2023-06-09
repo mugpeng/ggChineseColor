@@ -1,3 +1,7 @@
+Codes are modified from [nanxstats/ggsci: 🦄 Scientific journal and sci-fi themed color palettes for ggplot2 (github.com)](https://github.com/nanxstats/ggsci)
+
+
+
 Install:
 
 ``` r
